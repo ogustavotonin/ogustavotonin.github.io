@@ -7,7 +7,7 @@
   <meta name="description" content="Nexus Core Automação: automação residencial e comercial, segurança, controle de acesso, redes estruturadas, Wi-Fi, som ambiente e suporte. Projetos sob medida e comodato (assinatura)." />
 
   <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -31,34 +31,11 @@
   <style>
     .glass { background: rgba(10, 31, 68, .45); backdrop-filter: blur(10px); }
     .soft-shadow { box-shadow: 0 18px 60px rgba(6, 18, 43, .35); }
-    html { scroll-behavior: smooth; }
   </style>
 </head>
 
 <body class="bg-white text-slate-900">
-
-  <!-- Agendor WhatsApp Widget -->
-  <script>
-    window.WidgetWhatsConfig = {
-      "userId": 954902,
-      "accountId": 768501,
-      "funnelId": 876078,
-      "sequenceId": 1,
-      "whatsappNumber": "+5549999679836",
-      "companyName": "Nexus Core Automação",
-      "whatsappMessage": "Olá, quero uma proposta da Nexus Core. Pode me ajudar?",
-      "entity": "organization",
-      "deal": true,
-      "fields": [
-        { "name": "name", "label": "Nome", "type": "text", "required": true, "customField": false },
-        { "name": "email", "label": "E-mail", "type": "email", "required": true, "customField": false },
-        { "name": "whatsapp", "label": "WhatsApp", "type": "text", "required": true, "customField": false }
-      ]
-    };
-  </script>
-  <script src="https://widgets.agendor.com.br/whatsapp.js" defer></script>
-
-  <!-- HEADER -->
+  <!-- Top bar -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-950/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
 <a href="/" class="flex items-center">
