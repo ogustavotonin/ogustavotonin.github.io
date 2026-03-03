@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nexus Core Automação | Automação, Segurança e Redes</title>
+  <meta name="description" content="Nexus Core Automação: automação residencial e comercial, segurança, controle de acesso, redes estruturadas, Wi-Fi, som ambiente e suporte. Projetos sob medida e comodato (assinatura)." />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: "#06122B",
+              900: "#0A1F44",
+              800: "#0F2E66",
+              700: "#163D8C",
+              600: "#1E4ED8",
+              500: "#2F6BFF",
+              100: "#EAF0FF"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass { background: rgba(10, 31, 68, .45); backdrop-filter: blur(10px); }
+    .soft-shadow { box-shadow: 0 18px 60px rgba(6, 18, 43, .35); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900">
+
+  <!-- Agendor WhatsApp Widget -->
+  <script>
+    window.WidgetWhatsConfig = {
+      "userId": 954902,
+      "accountId": 768501,
+      "funnelId": 876078,
+      "sequenceId": 1,
+      "whatsappNumber": "+5549999679836",
+      "companyName": "Nexus Core Automação",
+      "whatsappMessage": "Olá, quero uma proposta da Nexus Core. Pode me ajudar?",
+      "entity": "organization",
+      "deal": true,
+      "fields": [
+        { "name": "name", "label": "Nome", "type": "text", "required": true, "customField": false },
+        { "name": "email", "label": "E-mail", "type": "email", "required": true, "customField": false },
+        { "name": "whatsapp", "label": "WhatsApp", "type": "text", "required": true, "customField": false }
+      ]
+    };
+  </script>
+  <script src="https://widgets.agendor.com.br/whatsapp.js" defer></script>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#topo" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold text-white">Nexus Core</p>
+          <p class="text-xs text-white/70">Automação • Segurança • Redes</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-sm text-white/80 hover:text-white" href="#servicos">Serviços</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#comodato">Assinatura</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#processo">Processo</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#cases">Cases</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#contato">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 md:inline">
+          Falar com especialista
+        </a>
+        <a href="#contato" class="rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">
+          Solicitar proposta
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="topo" class="relative overflow-hidden bg-brand-950">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800"></div>
+      <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.12]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
+            <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+            Tecnologia que simplifica (com suporte local)
+          </div>
+
+          <h1 class="mt-5 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Automação, Segurança e Redes
+            <span class="block text-white/80">Instalado do jeito certo. Com padrão e acabamento.</span>
+          </h1>
+
+          <p class="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
+            Projetos completos para residências e empresas: automação, controle de acesso, câmeras, Wi-Fi e infraestrutura
+            de rede. Soluções por venda pontual ou assinatura (comodato).
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#servicos" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Ver serviços
+            </a>
+            <a href="#comodato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Conhecer assinatura
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-3 text-xs text-white/70 sm:grid-cols-4">
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Projeto</p>
+              <p>Sob medida</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Instalação</p>
+              <p>Profissional</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Padrão</p>
+              <p>Organizado</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Suporte</p>
+              <p>Contínuo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="soft-shadow rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">O que entregamos</p>
+                <p class="mt-1 text-xs text-white/70">Integração, estabilidade e experiência premium</p>
+              </div>
+              <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-semibold text-brand-100">Full stack</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Automação (luz, persianas, clima)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Controle de acesso (fechaduras/biometria)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">CFTV e segurança (câmeras + gravação)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Wi-Fi e rede estruturada (Cat6/PoE)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Som ambiente / áudio distribuído</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-brand-900/40 p-4">
+              <p class="text-xs text-white/70">
+                * Do básico ao alto padrão. Sem “gambiarra”: documentação, organização e acabamento.
+              </p>
+            </div>
+          </div>
+
+          <div class="pointer-events-none absolute -left-2 -top-4 hidden rotate-[-6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Do orçamento à entrega</p>
+              <p class="text-white/70">Com processo claro</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute -bottom-4 -right-2 hidden rotate-[6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Suporte contínuo</p>
+              <p class="text-white/70">Para manter funcionando</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Serviços</h2>
+        <p class="mt-4 text-slate-600">
+          Escolha um serviço específico ou peça um projeto completo. Nós integramos tudo para funcionar junto.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <!-- Automação -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">A</div>
+          <h3 class="mt-4 text-lg font-semibold">Automação Residencial</h3>
+          <p class="mt-2 text-sm text-slate-600">Iluminação, persianas, cenas, rotinas, controle por voz e app.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Iluminação inteligente</li>
+            <li>• Persianas/cortinas</li>
+            <li>• Integrações (Alexa)</li>
+          </ul>
+        </div>
+
+        <!-- Comercial -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">B</div>
+          <h3 class="mt-4 text-lg font-semibold">Automação Comercial</h3>
+          <p class="mt-2 text-sm text-slate-600">Controle de ambientes, economia de energia e padronização.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Iluminação por presença</li>
+            <li>• Climatização inteligente</li>
+            <li>• Rotinas de abertura/fechamento</li>
+          </ul>
+        </div>
+
+        <!-- CFTV -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">C</div>
+          <h3 class="mt-4 text-lg font-semibold">CFTV e Segurança</h3>
+          <p class="mt-2 text-sm text-slate-600">Câmeras, gravação, acesso remoto e configuração correta.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Câmeras internas/externas</li>
+            <li>• NVR/DVR e retenção</li>
+            <li>• Alertas e evidências</li>
+          </ul>
+        </div>
+
+        <!-- Acesso -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">D</div>
+          <h3 class="mt-4 text-lg font-semibold">Controle de Acesso</h3>
+          <p class="mt-2 text-sm text-slate-600">Fechaduras digitais, portões e controle por usuários.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Fechaduras smart</li>
+            <li>• Portões/garagem</li>
+            <li>• Gestão de permissões</li>
+          </ul>
+        </div>
+
+        <!-- Rede -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">E</div>
+          <h3 class="mt-4 text-lg font-semibold">Rede Estruturada</h3>
+          <p class="mt-2 text-sm text-slate-600">Cabeamento, racks, PoE, organização e performance.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Cat6/Cat6A</li>
+            <li>• Rack/patch panel</li>
+            <li>• Switch PoE</li>
+          </ul>
+        </div>
+
+        <!-- Wi-Fi -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">F</div>
+          <h3 class="mt-4 text-lg font-semibold">Wi-Fi Profissional</h3>
+          <p class="mt-2 text-sm text-slate-600">Cobertura real, estabilidade e roaming bem feito.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Projeto de cobertura</li>
+            <li>• Access points</li>
+            <li>• Ajustes e otimização</li>
+          </ul>
+        </div>
+
+        <!-- Áudio -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">G</div>
+          <h3 class="mt-4 text-lg font-semibold">Som Ambiente</h3>
+          <p class="mt-2 text-sm text-slate-600">Áudio distribuído por zonas, com controle simples.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Sala, gourmet, quartos</li>
+            <li>• Amplificação e zonas</li>
+            <li>• Controle por app</li>
+          </ul>
+        </div>
+
+        <!-- Clima -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">H</div>
+          <h3 class="mt-4 text-lg font-semibold">Climatização</h3>
+          <p class="mt-2 text-sm text-slate-600">Integração de ar-condicionado com automação e rotinas.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Controle por cena/horário</li>
+            <li>• Automação por presença</li>
+            <li>• Integração com voz</li>
+          </ul>
+        </div>
+
+        <!-- Suporte -->
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">I</div>
+          <h3 class="mt-4 text-lg font-semibold">Suporte e Manutenção</h3>
+          <p class="mt-2 text-sm text-slate-600">Para manter a tecnologia estável e atualizada.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Atendimento e ajustes</li>
+            <li>• Diagnóstico remoto</li>
+            <li>• Atualizações (quando aplicável)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+        <a href="#contato" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+          Quero um projeto completo
+        </a>
+        <a href="#contato" class="rounded-2xl bg-slate-100 px-6 py-3 text-center text-sm font-semibold text-slate-900 hover:bg-slate-200">
+          Quero um serviço específico
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSINATURA / COMODATO -->
+  <section id="comodato" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Automação por Assinatura (Comodato)</h2>
+          <p class="mt-4 text-white/75">
+            Você usa a tecnologia sem comprar todos os equipamentos. Paga instalação + mensalidade previsível.
+          </p>
+
+          <div class="mt-10 space-y-3">
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Menor investimento inicial</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Suporte e manutenção inclusos (conforme plano)</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Atualizações e evolução do sistema (quando aplicável)</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Ideal para locação, Airbnb e alto padrão</div>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#contato" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Quero assinatura
+            </a>
+            <a href="#contato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Comparar com compra
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 soft-shadow">
+          <h3 class="text-lg font-semibold text-white">Comparativo rápido</h3>
+          <p class="mt-1 text-sm text-white/70">Assinatura vs compra tradicional</p>
+
+          <div class="mt-6 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10">
+            <div class="bg-brand-500/20 p-4">
+              <p class="text-sm font-semibold text-white">Assinatura Nexus Core</p>
+            </div>
+            <div class="bg-white/5 p-4">
+              <p class="text-sm font-semibold text-white/85">Compra Própria</p>
+            </div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Sem alto investimento inicial</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Investimento inicial alto</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Suporte/manutenção (conforme plano)</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Manutenção por conta do cliente</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Tecnologia evolui com o tempo</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Obsolescência e upgrades caros</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Custo previsível</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Gastos imprevisíveis</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Zero dor de cabeça técnica</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Risco total por conta do cliente</div>
+          </div>
+
+          <div class="mt-6 rounded-2xl bg-brand-900/40 p-4">
+            <p class="text-xs text-white/70">
+              * Planos e escopo variam por projeto. Você recebe proposta personalizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo" class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Nosso processo</h2>
+        <p class="mt-4 text-slate-600">Simples, claro e com entrega organizada.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-4">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">1</div>
+          <h3 class="mt-4 text-lg font-semibold">Diagnóstico</h3>
+          <p class="mt-2 text-sm text-slate-600">Entendemos seu objetivo, rotina e infraestrutura.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">2</div>
+          <h3 class="mt-4 text-lg font-semibold">Projeto</h3>
+          <p class="mt-2 text-sm text-slate-600">Definimos soluções, pontos, rede e integração.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">3</div>
+          <h3 class="mt-4 text-lg font-semibold">Instalação</h3>
+          <p class="mt-2 text-sm text-slate-600">Execução limpa, padrão e testes completos.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">4</div>
+          <h3 class="mt-4 text-lg font-semibold">Suporte</h3>
+          <p class="mt-2 text-sm text-slate-600">Ajustes finos, manutenção e evolução (se contratado).</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-3xl bg-brand-900 p-8 text-white soft-shadow">
+        <p class="text-sm text-white/80">O objetivo:</p>
+        <p class="mt-2 text-xl font-semibold">Tudo funcionando junto — com estabilidade e facilidade de uso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES / PROVAS -->
+  <section id="cases" class="bg-slate-50">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Cases e aplicações</h2>
+      <p class="mt-4 max-w-2xl text-slate-600">Exemplos do que normalmente entregamos (adaptamos ao seu cenário).</p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Residência</p>
+          <p class="mt-2 text-sm text-slate-600">Iluminação + persianas + climatização + fechadura digital.</p>
+          <div class="mt-4 rounded-2xl bg-slate-50 p-4 text-xs text-slate-600">
+            Resultado: conforto, cenas e controle por voz.
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Clínica / consultório</p>
+          <p class="mt-2 text-sm text-slate-600">Acesso, câmeras, Wi-Fi estável e automação de rotinas.</p>
+          <div class="mt-4 rounded-2xl bg-slate-50 p-4 text-xs text-slate-600">
+            Resultado: segurança e padronização operacional.
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Airbnb / locação</p>
+          <p class="mt-2 text-sm text-slate-600">Acesso por códigos, automação e suporte para evitar dor de cabeça.</p>
+          <div class="mt-4 rounded-2xl bg-slate-50 p-4 text-xs text-slate-600">
+            Resultado: controle remoto e menos ocorrências.
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+        <a href="#contato" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+          Quero um orçamento
+        </a>
+        <a href="#contato" class="rounded-2xl bg-white px-6 py-3 text-center text-sm font-semibold text-slate-900 hover:bg-slate-100 border border-slate-200">
+          Quero falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Perguntas comuns</h2>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <details class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <summary class="cursor-pointer text-sm font-semibold text-slate-900">Vocês fazem só um serviço (ex.: Wi-Fi)?</summary>
+          <p class="mt-3 text-sm text-slate-600">Sim. Também fazemos projetos completos integrando tudo.</p>
+        </details>
+
+        <details class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <summary class="cursor-pointer text-sm font-semibold text-slate-900">A automação funciona sem internet?</summary>
+          <p class="mt-3 text-sm text-slate-600">Depende do escopo. Projetamos para manter funções essenciais mesmo com falhas de internet.</p>
+        </details>
+
+        <details class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <summary class="cursor-pointer text-sm font-semibold text-slate-900">Como funciona o comodato (assinatura)?</summary>
+          <p class="mt-3 text-sm text-slate-600">Instalação + mensalidade. O sistema é definido por plano e proposta personalizada.</p>
+        </details>
+
+        <details class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <summary class="cursor-pointer text-sm font-semibold text-slate-900">Vocês atendem empresas?</summary>
+          <p class="mt-3 text-sm text-slate-600">Sim. Escritórios, clínicas, comércios e imóveis de locação.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Fale com a Nexus Core</h2>
+          <p class="mt-4 text-white/75">
+            Envie seus dados e nós retornamos com orientação técnica e proposta.
+          </p>
+
+          <div class="mt-8 rounded-3xl bg-white/5 p-6 text-white/85">
+            <p class="text-sm font-semibold text-white">Contato rápido</p>
+            <p class="mt-2 text-sm text-white/70">
+              WhatsApp: <span class="text-white">+55 (49) 99967-9836</span><br/>
+              E-mail: <span class="text-white">contato@nexuscoreautomacao.com.br</span>
+            </p>
+          </div>
+
+          <div class="mt-6 rounded-3xl bg-white/5 p-6 text-white/85">
+            <p class="text-sm font-semibold text-white">Para agilizar o orçamento</p>
+            <ul class="mt-3 space-y-2 text-sm text-white/70">
+              <li>• Cidade/UF e tipo de imóvel</li>
+              <li>• O que você quer (automação, câmeras, acesso, rede)</li>
+              <li>• Se é compra ou assinatura (comodato)</li>
+              <li>• Prazo e preferências de acabamento</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="rounded-3xl bg-white p-6 soft-shadow" onsubmit="event.preventDefault(); alert('Form enviado (demo). Conecte isso no Make/n8n/Agendor.');">
+          <div class="grid gap-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Nome</label>
+              <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Seu nome" required />
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-xs font-semibold text-slate-700">WhatsApp</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="(00) 00000-0000" required />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-700">E-mail</label>
+                <input type="email" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="voce@email.com" />
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Cidade</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Ex.: Joaçaba" />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Modelo</label>
+                <select class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500">
+                  <option>Compra (venda pontual)</option>
+                  <option>Assinatura (comodato)</option>
+                  <option>Não sei ainda</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-700">O que você precisa?</label>
+              <select class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500">
+                <option>Projeto completo (automação + segurança + rede)</option>
+                <option>Automação (luz/persianas/clima)</option>
+                <option>Câmeras (CFTV)</option>
+                <option>Controle de acesso (fechadura/portão)</option>
+                <option>Rede estruturada / Wi-Fi</option>
+                <option>Som ambiente</option>
+                <option>Suporte/manutenção</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Mensagem</label>
+              <textarea class="mt-1 min-h-[110px] w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Descreva seu objetivo (ex.: automatizar iluminação e persianas, melhorar Wi-Fi, instalar câmeras)"></textarea>
+            </div>
+
+            <button class="rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-600">
+              Solicitar proposta
+            </button>
+
+            <p class="text-xs text-slate-500">
+              Ao enviar, você concorda em ser contatado pela Nexus Core para proposta e agendamento.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-950 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-5 py-10">
+      <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+          <div>
+            <p class="text-sm font-semibold text-white">Nexus Core Automação</p>
+            <p class="text-xs text-white/70">Tecnologia que simplifica</p>
+          </div>
+        </div>
+        <div class="text-xs text-white/60">
+          © <span id="year"></span> Nexus Core. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
