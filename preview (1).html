@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monitoramento de Veículos de Carga | Nexus Core</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: "#06122B",
+              900: "#0A1F44",
+              800: "#0F2E66",
+              700: "#163D8C",
+              600: "#1E4ED8",
+              500: "#2F6BFF",
+              100: "#EAF0FF"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass { background: rgba(10, 31, 68, .45); backdrop-filter: blur(10px); }
+    .soft-shadow { box-shadow: 0 18px 60px rgba(6, 18, 43, .35); }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold text-white">Nexus Core</p>
+          <p class="text-xs text-white/70">Monitoramento de Frota</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-sm text-white/80 hover:text-white" href="#como-funciona">Como funciona</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#beneficios">Benefícios</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#comparativo">Comparativo</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#limitacoes">Limitações</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#contato">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 md:inline">
+          Falar com especialista
+        </a>
+        <a href="#contato" class="rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">
+          Solicitar proposta
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-brand-950">
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800"></div>
+      <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.12]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
+            <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+            Monitoramento por câmeras (frota e cargas)
+          </div>
+
+          <h1 class="mt-5 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Câmeras para Monitoramento de Veículos de Carga
+            <span class="block text-white/80">Mais segurança, prova e gestão operacional.</span>
+          </h1>
+
+          <p class="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
+            Instalação profissional de câmeras veiculares para cabina e carga, com gravação, acesso remoto (quando aplicável)
+            e evidências para reduzir perdas, fraudes e disputas.
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#como-funciona" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Como funciona
+            </a>
+            <a href="#contato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Falar com especialista
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-3 text-xs text-white/70 sm:grid-cols-4">
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Instalação</p>
+              <p>Profissional</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Gravação</p>
+              <p>Contínua</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Evidências</p>
+              <p>Para ocorrências</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Suporte</p>
+              <p>Opcional</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="soft-shadow rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">Configuração exemplo</p>
+                <p class="mt-1 text-xs text-white/70">Caminhão/van com foco em segurança e prova</p>
+              </div>
+              <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-semibold text-brand-100">Frota</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">1 câmera frontal (road)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">1 câmera cabine (motorista)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">1 câmera baú/carga (quando possível)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">DVR/gravador veicular + armazenamento</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Acesso remoto (dependente de sinal)</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-brand-900/40 p-4">
+              <p class="text-xs text-white/70">
+                * A configuração varia por tipo de veículo, operação e requisitos de privacidade/compliance.
+              </p>
+            </div>
+          </div>
+
+          <div class="pointer-events-none absolute -left-2 -top-4 hidden rotate-[-6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Reduza disputas</p>
+              <p class="text-white/70">Com evidência em vídeo</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute -bottom-4 -right-2 hidden rotate-[6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Mais segurança</p>
+              <p class="text-white/70">Motorista e carga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Como funciona o monitoramento por câmeras</h2>
+        <p class="mt-4 text-slate-600">
+          Instalamos câmeras veiculares conectadas a um gravador (DVR) com armazenamento local.
+          Em modelos compatíveis, é possível visualizar remotamente (dependendo de internet/sinal).
+          O objetivo é registrar ocorrências, reduzir perdas e trazer transparência para a operação.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">1</div>
+          <h3 class="mt-4 text-lg font-semibold">Diagnóstico da operação</h3>
+          <p class="mt-2 text-sm text-slate-600">Entendemos rotas, riscos, tipo de carga e necessidade de prova.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">2</div>
+          <h3 class="mt-4 text-lg font-semibold">Instalação no veículo</h3>
+          <p class="mt-2 text-sm text-slate-600">Fixação correta, cabeamento protegido e padrão automotivo.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">3</div>
+          <h3 class="mt-4 text-lg font-semibold">Configuração e entrega</h3>
+          <p class="mt-2 text-sm text-slate-600">Ajuste de gravação, retenção e acesso para gestão/ocorrências.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-3xl bg-brand-900 p-8 text-white soft-shadow">
+        <p class="text-sm text-white/80">Resultado esperado:</p>
+        <p class="mt-2 text-xl font-semibold">
+          Mais segurança, mais controle e menos prejuízo com ocorrências e disputas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Vantagens do monitoramento por câmeras</h2>
+          <p class="mt-4 text-white/75">
+            Ideal para transportadoras, frotas próprias e operações que precisam reduzir perdas, fraudes e riscos.
+          </p>
+
+          <div class="mt-10 space-y-3">
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Evidência em vídeo para sinistros e disputas</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Redução de fraudes (acidentes, avarias, entrega)</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Mais segurança para motorista e carga</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Auditoria de procedimentos (quando permitido)</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Apoio à gestão e treinamento operacional</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Registro de eventos críticos (quando configurado)</div>
+          </div>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#contato" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Solicitar proposta
+            </a>
+            <a href="#contato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Falar com especialista
+            </a>
+          </div>
+        </div>
+
+        <div id="comparativo" class="rounded-3xl border border-white/10 bg-white/5 p-6 soft-shadow">
+          <h3 class="text-lg font-semibold text-white">Comparativo</h3>
+          <p class="mt-1 text-sm text-white/70">Câmeras veiculares vs “apenas rastreador”</p>
+
+          <div class="mt-6 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10">
+            <div class="bg-brand-500/20 p-4">
+              <p class="text-sm font-semibold text-white">Câmeras no veículo</p>
+            </div>
+            <div class="bg-white/5 p-4">
+              <p class="text-sm font-semibold text-white/85">Somente rastreador</p>
+            </div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Mostra o que aconteceu (vídeo)</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Mostra onde estava (localização)</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Ajuda em disputas e provas</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Menos suporte para evidências</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Melhora segurança e compliance</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Foco primário em rota/posição</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Depende de instalação e retenção</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Mais simples, menos itens</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Valor maior, entrega maior</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Valor menor, entrega menor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXEMPLO REAL -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Exemplo de configuração para frota</h2>
+          <p class="mt-4 text-slate-600">
+            Um pacote típico foca em registrar via pública, cabina e (quando aplicável) área de carga.
+            Ajustamos quantidade de câmeras, retenção e acesso conforme sua operação.
+          </p>
+
+          <div class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-slate-900">Veículo com:</p>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>• 1 câmera frontal (rodovia/trânsito)</li>
+              <li>• 1 câmera cabine (contexto e segurança)</li>
+              <li>• 1 câmera carga/baú (quando possível)</li>
+              <li>• DVR automotivo + armazenamento local</li>
+              <li>• Opção de acesso remoto (dependente de sinal)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-brand-100 p-6 soft-shadow">
+          <h3 class="text-lg font-semibold text-brand-900">Por que faz sentido?</h3>
+          <p class="mt-3 text-sm text-brand-900/80">
+            Porque o vídeo reduz custo oculto: disputas de entrega, alegações sem prova, sinistros e fraudes.
+            O retorno vem da redução de prejuízo e do ganho de controle operacional.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white p-4">
+              <p class="text-xs font-semibold text-slate-700">Sem câmeras</p>
+              <p class="mt-1 text-sm text-slate-600">Mais disputa, menos prova, mais risco</p>
+            </div>
+            <div class="rounded-2xl bg-white p-4">
+              <p class="text-xs font-semibold text-slate-700">Com câmeras</p>
+              <p class="mt-1 text-sm text-slate-600">Mais evidência, mais segurança, mais controle</p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl bg-brand-900 p-5 text-white">
+            <p class="text-sm font-semibold">Resultado</p>
+            <p class="mt-1 text-sm text-white/80">
+              Decisões mais rápidas e redução de prejuízos por ocorrência.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIMITAÇÕES / DESVANTAGENS -->
+  <section id="limitacoes" class="bg-slate-50">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Limitações e desvantagens (transparência)</h2>
+      <p class="mt-4 max-w-3xl text-slate-600">
+        Monitoramento por câmeras resolve “o que aconteceu”, mas tem pontos importantes que precisam ser aceitos e gerenciados.
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Dependência de energia e instalação</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Se a instalação não for bem feita (proteção, fixação, alimentação), pode haver falhas e manutenção.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Acesso remoto depende de sinal</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Em rotas sem cobertura, a visualização ao vivo pode ser limitada. A gravação local continua funcionando.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Privacidade e compliance</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Requer política clara, aviso e regras internas. Uso indevido pode gerar risco trabalhista/jurídico.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Gestão de armazenamento</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Retenção de vídeos depende de capacidade e configuração. Sem controle, gravações antigas sobrescrevem.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Custo maior que soluções “simples”</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Câmeras + DVR + instalação têm custo mais alto, porém entregam evidência e segurança superiores.
+          </p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Manutenção em ambiente severo</p>
+          <p class="mt-2 text-sm text-slate-600">
+            Poeira, vibração e clima exigem padrão automotivo e revisões. Equipamento inadequado tende a falhar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + FORM -->
+  <section id="contato" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Proteja sua frota e sua operação</h2>
+          <p class="mt-4 text-white/75">
+            Envie seus dados e receba uma proposta por veículo, com indicação de configuração e limitações reais.
+          </p>
+
+          <div class="mt-8 rounded-3xl bg-white/5 p-6 text-white/85">
+            <p class="text-sm font-semibold text-white">Contato rápido</p>
+            <p class="mt-2 text-sm text-white/70">
+              WhatsApp: <span class="text-white">+55 (49) 99967-9836</span><br/>
+              E-mail: <span class="text-white">contato@nexuscoreautomacao.com.br</span>
+            </p>
+          </div>
+
+          <div class="mt-6 rounded-3xl bg-white/5 p-6 text-white/85">
+            <p class="text-sm font-semibold text-white">O que normalmente pedimos</p>
+            <ul class="mt-3 space-y-2 text-sm text-white/70">
+              <li>• Tipo de veículo (caminhão, van, utilitário)</li>
+              <li>• Quantos veículos na frota</li>
+              <li>• Rotas (urbano/rodovia) e riscos mais comuns</li>
+              <li>• Se precisa câmera de carga/baú</li>
+              <li>• Se precisa acesso remoto/ao vivo</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="rounded-3xl bg-white p-6 soft-shadow" onsubmit="event.preventDefault(); alert('Form enviado (demo). Integre com seu CRM/WhatsApp/Make.');">
+          <div class="grid gap-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Nome</label>
+              <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Seu nome" required />
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-xs font-semibold text-slate-700">WhatsApp</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="(00) 00000-0000" required />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Empresa</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Nome da transportadora" />
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Qtde. de veículos</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Ex.: 8" />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Cidade/UF</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Ex.: Joaçaba/SC" />
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Onde você quer monitorar?</label>
+              <select class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500">
+                <option>Frontal (rodovia/trânsito)</option>
+                <option>Cabine (motorista)</option>
+                <option>Carga/baú</option>
+                <option>Pacote completo (frontal + cabine + carga)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Mensagem</label>
+              <textarea class="mt-1 min-h-[110px] w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500"
+                placeholder="Descreva sua operação, rotas e principais dores (ex.: avarias, roubos, disputas)"></textarea>
+            </div>
+
+            <button class="rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-600">
+              Solicitar proposta
+            </button>
+
+            <p class="text-xs text-slate-500">
+              Ao enviar, você concorda em ser contatado pela Nexus Core para proposta e agendamento.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-950 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-5 py-10">
+      <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+          <div>
+            <p class="text-sm font-semibold text-white">Nexus Core</p>
+            <p class="text-xs text-white/70">Monitoramento de Frota e Cargas</p>
+          </div>
+        </div>
+        <div class="text-xs text-white/60">
+          © <span id="year"></span> Nexus Core. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- (Opcional) Widget WhatsApp / Agendor: cole aqui no FINAL, antes de </body> -->
+  <!--
+  <script>
+    window.WidgetWhatsConfig = {
+      "userId": 954902,
+      "accountId": 768501,
+      "funnelId": 876078,
+      "sequenceId": 1,
+      "whatsappNumber": "+5549999679836",
+      "companyName": "Nexus Core",
+      "whatsappMessage": "Olá, gostaria de saber mais sobre monitoramento de frota!",
+      "entity": "organization",
+      "deal": true,
+      "fields": [
+        { "name": "name", "label": "Nome", "type": "text", "required": true, "customField": false },
+        { "name": "email", "label": "E-mail", "type": "email", "required": true, "customField": false },
+        { "name": "whatsapp", "label": "WhatsApp", "type": "text", "required": true, "customField": false }
+      ]
+    };
+  </script>
+  <script src="https://widgets.agendor.com.br/whatsapp.js" defer></script>
+  -->
+</body>
+</html>
