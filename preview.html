@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automação Residencial por Assinatura | Nexus Core</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: "#06122B",
+              900: "#0A1F44",
+              800: "#0F2E66",
+              700: "#163D8C",
+              600: "#1E4ED8",
+              500: "#2F6BFF",
+              100: "#EAF0FF"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glass { background: rgba(10, 31, 68, .45); backdrop-filter: blur(10px); }
+    .soft-shadow { box-shadow: 0 18px 60px rgba(6, 18, 43, .35); }
+  </style>
+</head>
+
+<body class="bg-white text-slate-900">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold text-white">Nexus Core</p>
+          <p class="text-xs text-white/70">Automação Residencial</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-6 md:flex">
+        <a class="text-sm text-white/80 hover:text-white" href="#como-funciona">Como funciona</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#beneficios">Benefícios</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#comparativo">Comparativo</a>
+        <a class="text-sm text-white/80 hover:text-white" href="#contato">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="hidden rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 md:inline">
+          Falar com especialista
+        </a>
+        <a href="#contato" class="rounded-xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-600">
+          Solicitar proposta
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-brand-950">
+    <!-- Background -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800"></div>
+      <div class="absolute -top-32 -right-24 h-96 w-96 rounded-full bg-brand-500/25 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-brand-600/20 blur-3xl"></div>
+      <div class="absolute inset-0 opacity-[0.12]" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 22px 22px;"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-6xl px-5 py-20 md:py-28">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">
+            <span class="h-2 w-2 rounded-full bg-brand-500"></span>
+            Automação como serviço (comodato)
+          </div>
+
+          <h1 class="mt-5 text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            Automação Residencial por Assinatura
+            <span class="block text-white/80">Tecnologia Inteligente. Investimento Inteligente.</span>
+          </h1>
+
+          <p class="mt-5 text-base leading-relaxed text-white/80 md:text-lg">
+            Você não precisa comprar equipamentos para ter uma casa inteligente.
+            Ative iluminação, climatização, persianas e fechaduras digitais com instalação + mensalidade fixa.
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#como-funciona" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Como funciona
+            </a>
+            <a href="#contato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Falar com especialista
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-3 text-xs text-white/70 sm:grid-cols-4">
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Instalação</p>
+              <p>Profissional</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Mensalidade</p>
+              <p>Previsível</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Suporte</p>
+              <p>Contínuo</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-3">
+              <p class="font-semibold text-white">Atualização</p>
+              <p>Garantida</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="soft-shadow rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold text-white">Plano exemplo</p>
+                <p class="mt-1 text-xs text-white/70">Casa inteligente básica + escalável</p>
+              </div>
+              <span class="rounded-full bg-brand-500/20 px-3 py-1 text-xs font-semibold text-brand-100">Premium</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Iluminação inteligente</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Persianas automatizadas</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Climatização integrada</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Fechadura digital</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+              <div class="flex items-center justify-between rounded-2xl bg-white/5 p-4">
+                <p class="text-sm text-white/80">Integração Alexa</p>
+                <p class="text-sm font-semibold text-white">✔</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-brand-900/40 p-4">
+              <p class="text-xs text-white/70">
+                * Itens e valores variam conforme projeto. Você recebe uma proposta personalizada.
+              </p>
+            </div>
+          </div>
+
+          <!-- “handwritten” notes -->
+          <div class="pointer-events-none absolute -left-2 -top-4 hidden rotate-[-6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Não precisa comprar equipamentos</p>
+              <p class="text-white/70">Você assina e usa</p>
+            </div>
+          </div>
+          <div class="pointer-events-none absolute -bottom-4 -right-2 hidden rotate-[6deg] md:block">
+            <div class="glass rounded-2xl px-4 py-3 text-xs text-white/85">
+              <p class="font-semibold">Nós cuidamos da manutenção</p>
+              <p class="text-white/70">Suporte incluso</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-slate-900">O que é Automação por Assinatura?</h2>
+        <p class="mt-4 text-slate-600">
+          É um modelo onde você utiliza os equipamentos sem precisar comprá-los.
+          A Nexus Core fornece os dispositivos e integra o sistema; você paga instalação + mensalidade fixa.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">1</div>
+          <h3 class="mt-4 text-lg font-semibold">Projeto personalizado</h3>
+          <p class="mt-2 text-sm text-slate-600">Levantamos sua necessidade e desenhamos um pacote sob medida.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">2</div>
+          <h3 class="mt-4 text-lg font-semibold">Instalação profissional</h3>
+          <p class="mt-2 text-sm text-slate-600">Instalação limpa, organizada e pronta para uso no dia.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-100 text-brand-700 font-bold">3</div>
+          <h3 class="mt-4 text-lg font-semibold">Mensalidade previsível</h3>
+          <p class="mt-2 text-sm text-slate-600">Suporte e manutenção inclusos, com tecnologia sempre atualizada.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-3xl bg-brand-900 p-8 text-white soft-shadow">
+        <p class="text-sm text-white/80">Isso significa:</p>
+        <p class="mt-2 text-xl font-semibold">
+          Mais tranquilidade, suporte técnico incluso e atualização constante da tecnologia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Benefícios da Assinatura</h2>
+          <p class="mt-4 text-white/75">
+            Pronto para transformar sua casa sem imobilizar capital?
+            Receba uma proposta personalizada e comece com previsibilidade.
+          </p>
+
+          <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+            <a href="#contato" class="rounded-2xl bg-brand-500 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-brand-600">
+              Solicitar proposta
+            </a>
+            <a href="#contato" class="rounded-2xl bg-white/10 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/15">
+              Falar no WhatsApp
+            </a>
+          </div>
+
+          <div class="mt-10 space-y-3">
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Projeto personalizado</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Equipamentos em comodato</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Suporte técnico contínuo</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Manutenção inclusa</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Atualização tecnológica</div>
+            <div class="rounded-2xl bg-white/5 p-4 text-white/85">✔ Monitoramento remoto (quando aplicável)</div>
+          </div>
+        </div>
+
+        <div id="comparativo" class="rounded-3xl border border-white/10 bg-white/5 p-6 soft-shadow">
+          <h3 class="text-lg font-semibold text-white">Comparativo</h3>
+          <p class="mt-1 text-sm text-white/70">Assinatura vs Compra tradicional</p>
+
+          <div class="mt-6 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10">
+            <div class="bg-brand-500/20 p-4">
+              <p class="text-sm font-semibold text-white">Assinatura Nexus Core</p>
+            </div>
+            <div class="bg-white/5 p-4">
+              <p class="text-sm font-semibold text-white/85">Compra Própria</p>
+            </div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Sem alto investimento inicial</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Alto investimento inicial</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Suporte e substituição inclusos</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Manutenção por conta do cliente</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Atualização tecnológica garantida</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Equipamento fica obsoleto</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Mensalidade previsível</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Gastos inesperados</div>
+
+            <div class="bg-brand-500/10 p-4 text-sm text-white/85">Zero preocupação técnica</div>
+            <div class="bg-white/5 p-4 text-sm text-white/75">Risco total por conta do cliente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXEMPLO REAL -->
+  <section class="bg-white">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Exemplo de configuração</h2>
+          <p class="mt-4 text-slate-600">
+            Um pacote típico pode incluir itens como iluminação inteligente, persianas, climatização e fechadura digital.
+            O projeto e a proposta são ajustados conforme sua casa.
+          </p>
+
+          <div class="mt-7 rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <p class="text-sm font-semibold text-slate-900">Casa com:</p>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li>• 12 pontos de iluminação inteligente</li>
+              <li>• 3 persianas automatizadas</li>
+              <li>• 2 ar-condicionados integrados</li>
+              <li>• 1 fechadura digital</li>
+              <li>• Integração completa com Alexa</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-brand-100 p-6 soft-shadow">
+          <h3 class="text-lg font-semibold text-brand-900">Por que faz sentido?</h3>
+          <p class="mt-3 text-sm text-brand-900/80">
+            Em vez de imobilizar capital comprando equipamentos, você transforma sua casa com previsibilidade:
+            instalação + mensalidade fixa, com suporte contínuo.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl bg-white p-4">
+              <p class="text-xs font-semibold text-slate-700">Compra tradicional</p>
+              <p class="mt-1 text-sm text-slate-600">Investimento inicial + manutenção</p>
+            </div>
+            <div class="rounded-2xl bg-white p-4">
+              <p class="text-xs font-semibold text-slate-700">Assinatura Nexus Core</p>
+              <p class="mt-1 text-sm text-slate-600">Instalação + mensalidade previsível</p>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl bg-brand-900 p-5 text-white">
+            <p class="text-sm font-semibold">Resultado</p>
+            <p class="mt-1 text-sm text-white/80">
+              Mais conforto e controle, sem dor de cabeça técnica.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="bg-slate-50">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <h2 class="text-3xl font-semibold tracking-tight text-slate-900">Para quem é</h2>
+      <p class="mt-4 max-w-2xl text-slate-600">
+        Ideal para quem quer tecnologia premium com previsibilidade e suporte.
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Alto padrão</p>
+          <p class="mt-2 text-sm text-slate-600">Conforto, estética e integração bem feita.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Airbnb / locação</p>
+          <p class="mt-2 text-sm text-slate-600">Controle remoto e padronização do imóvel.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 soft-shadow">
+          <p class="text-sm font-semibold text-slate-900">Sem tempo / sem dor</p>
+          <p class="mt-2 text-sm text-slate-600">Você usa. A Nexus Core cuida do resto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA + FORM -->
+  <section id="contato" class="bg-brand-950">
+    <div class="mx-auto max-w-6xl px-5 py-16 md:py-20">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight text-white">Transforme sua casa hoje</h2>
+          <p class="mt-4 text-white/75">
+            Envie seus dados e receba uma proposta personalizada.
+          </p>
+
+          <div class="mt-8 rounded-3xl bg-white/5 p-6 text-white/85">
+            <p class="text-sm font-semibold text-white">Contato rápido</p>
+            <p class="mt-2 text-sm text-white/70">
+              WhatsApp: <span class="text-white">+55 (49) 99967-9836</span><br/>
+              E-mail: <span class="text-white">contato@nexuscoreautomacao.com.br</span>
+            </p>
+          </div>
+        </div>
+
+        <form class="rounded-3xl bg-white p-6 soft-shadow" onsubmit="event.preventDefault(); alert('Form enviado (demo). Integre com seu backend/Make.');">
+          <div class="grid gap-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Nome</label>
+              <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Seu nome" required />
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="text-xs font-semibold text-slate-700">WhatsApp</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="(00) 00000-0000" required />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-700">Cidade</label>
+                <input class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Ex.: Joaçaba" />
+              </div>
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-700">O que você quer automatizar?</label>
+              <select class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500">
+                <option>Iluminação</option>
+                <option>Persianas</option>
+                <option>Climatização</option>
+                <option>Fechadura digital</option>
+                <option>Pacote completo</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-700">Mensagem</label>
+              <textarea class="mt-1 min-h-[110px] w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-brand-500" placeholder="Descreva sua casa e objetivos (opcional)"></textarea>
+            </div>
+
+            <button class="rounded-2xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-600">
+              Solicitar proposta
+            </button>
+
+            <p class="text-xs text-slate-500">
+              Ao enviar, você concorda em ser contatado pela Nexus Core para proposta e agendamento.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-950 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-5 py-10">
+      <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-brand-500"></div>
+          <div>
+            <p class="text-sm font-semibold text-white">Nexus Core Automação</p>
+            <p class="text-xs text-white/70">Tecnologia que simplifica</p>
+          </div>
+        </div>
+        <div class="text-xs text-white/60">
+          © <span id="year"></span> Nexus Core. Todos os direitos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
